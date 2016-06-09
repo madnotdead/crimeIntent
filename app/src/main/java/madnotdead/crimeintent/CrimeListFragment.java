@@ -33,7 +33,11 @@ public class CrimeListFragment extends Fragment {
     }
 
     private void UpdateUI(){
-        CrimeLab
+        CrimeLab crimeLab = CrimeLab.get(getActivity());
+        List<Crime> crimes = crimeLab.getCrimes();
+
+        mAdapter  = new CrimeAdapter(crimes);
+        mCrimeRecycleView.setAdapter(mAdapter);
     }
 
     private class CrimeHolder extends RecyclerView.ViewHolder{
