@@ -25,9 +25,9 @@ public class CrimeLab {
     private CrimeLab(Context contex){
         mCrimes = new ArrayList<>();
 
-        Crime crime = null;
+//        Crime crime = null;
         for (int i = 0; i < 100; i++) {
-            crime = new Crime();
+            Crime crime = new Crime();
             crime.setTitle("Crime #" + i);
             crime.setSolved(i % 2 == 0);
             mCrimes.add(crime);
