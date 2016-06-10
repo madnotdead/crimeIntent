@@ -17,7 +17,7 @@ public class CrimeLab {
 
     public static CrimeLab get(Context context){
         if(sCrimeLab == null)
-            return new CrimeLab(context);
+            sCrimeLab = new CrimeLab(context);
 
         return sCrimeLab;
     }
@@ -41,11 +41,9 @@ public class CrimeLab {
     public Crime getCrime(UUID id){
 
         for (Crime crime:mCrimes) {
-
                 if(crime.getId().equals(id)){
                     return crime;
                 }
-
         }
         return null;
     }
